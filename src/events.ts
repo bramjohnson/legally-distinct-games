@@ -10,7 +10,7 @@ interface StageEvent {
 interface GameState {
     players: Player[],
     stageEvents: StageEvent[],
-    seed: number,
+    seed: number, // Will be randomified by the RandomSeedifier
     seedIndex: number
 }
 
@@ -19,7 +19,7 @@ interface History {
 }
 
 interface Session {
-    // beforeGameState might not be necessary but it might make debugging easier???
+    // beforeGameState not necessary but it might make debugging easier???
     beforeGameState: GameState,
     eventRecords: EventRecord[],
     afterGameState: GameState,
