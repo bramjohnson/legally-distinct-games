@@ -1,7 +1,59 @@
+// Player
+type PlayerID = number
 
 interface Player {
-
+    playerID: PlayerID
+    // PlayerID -> Relationship
+    // Add relationship to self (self-esteem) for some special events
+    relationships: Record<PlayerID, number>
 }
+
+enum Status {
+    Dead,
+    Alive,
+    Missing,
+}
+
+interface Effects {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 interface StageEvent {
 
@@ -31,8 +83,13 @@ interface EventRecord {
 }
 
 interface Event {
-    isPossible: (gameState: GameState) => boolean;
-    apply: (gameState: GameState) => [GameState, string];
+    isPossible: (gameState: GameState) => boolean
+    apply: (gameState: GameState) => [GameState, string]
+    probability: number,
+    playerHunters: PlayerHunter[]
+    description: string
+}
+
+interface PlayerHunter {
     ratePlayer: (player: Player) => number
-    description: string;
 }

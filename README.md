@@ -12,3 +12,6 @@ Only problem is how do we decide where players go in an event.
 - Example: two players are tied for one PlayerHunter score, but one has a much higher score for another PlayerHunter
     - How do we ensure that the players get chosen to optimize score?
 https://en.wikipedia.org/wiki/Assignment_problem
+
+# Players
+Health not number but some enum or something...
